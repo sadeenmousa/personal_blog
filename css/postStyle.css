@@ -1,0 +1,89 @@
+body {
+  background: #f7f4f2;
+}
+
+a {
+  color: #454545;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  color: #999999;
+}
+
+p {
+  color: #454545;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 90px auto auto 1fr;
+  grid-gap: 15px;
+  grid-template-areas:
+  "hd "
+  "sb "
+  "ct "
+  "sc";
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 15px;
+  line-height: 30px;
+  justify-content: space-between;
+  background: #EFEAE6;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  grid-area: hd;
+}
+
+.sidebar {
+  grid-area: sb;
+}
+
+.content {
+  grid-area: ct;
+  display: block;
+  justify-content:space-between;
+  line-height: 30px;
+}
+
+.social {
+  grid-area: sc;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.button1 {
+  width: 60px;
+  background-color: #fff;
+  color: grey;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media(min-width:1101px) {
+  .container{
+    display: grid;
+    grid-template-columns:  300px 300px 300px ;
+    grid-template-rows: 120px 800px 300px;
+    grid-gap: 15px;
+    grid-template-areas:
+    "hd hd hd hd hd hd"
+    "ct ct ct ct sb sb"
+    "ct ct ct ct sc sc";
+  }
+}
